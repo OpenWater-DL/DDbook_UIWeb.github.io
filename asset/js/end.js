@@ -1,4 +1,4 @@
 
 function reset(){
-    window.open('top.html','_self')
+    window.open('index.html','_self')
 }

@@ -112,5 +112,5 @@ function nextPage(){
 }
 
 function prePage(){
-    window.open('top.html','_self')
+    window.open('index.html','_self')
 }
