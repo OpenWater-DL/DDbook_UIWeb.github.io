@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認知症世界一周ツアー</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body class="l-m-page-body">
+    <header>
+      <div class="l-header">
+        <img src="./asset/img/site-title.png" alt="" />
+      </div>
+    </header>
+
+    <div class="l-m-background-map">
+      <img src="./asset/img/map.png" alt="" srcset="" />
+    </div>
+
+    <main class="l-main">
+      <nav class="o-c-nav">
+        <div class="o-c-nav__item state-1">
+          <div class="o-c-nav__item--num">1</div>
+          <div class="o-c-nav__item--text">ご説明</div>
+        </div>
+        <div class="o-c-nav__item state-2">
+          <div class="o-c-nav__item--num">2</div>
+          <div class="o-c-nav__item--text">日程の入力</div>
+        </div>
+        <div class="o-c-nav__item state-3">
+          <div class="o-c-nav__item--num">3</div>
+          <div class="o-c-nav__item--text">あなたの情報</div>
+        </div>
+        <div class="o-c-nav__item state-4">
+          <div class="o-c-nav__item--num">4</div>
+          <div class="o-c-nav__item--text">ご確認</div>
+        </div>
+      </nav>
+
+      <div class="countdown">
+        <span id="time" class="time countdown-timer">00:00.00</span>
+      </div>
+<!-- 
+      <div id="o-p-countdown-dailog" class="u-hidden">
+        <div  id="o-p-countdown-dailog__text">
+            <div  id="o-p-countdown-dailog__text--ing" >時間内に入力を完了してください</div>
+            <div  id="o-p-countdown-dailog__text--over" class="u-hidden">時間切れです</div>            
+
+        </div>
+     
+        <div  id="o-p-countdown-dailog__time" class="countdown-timer">00:30:00</div>
+        <div  id="o-p-countdown-dailog__close">
+            <img src="asset/img/full-screen.png" alt="" srcset="">
+        </div>
+        
+        <button  id="o-p-countdown-dailog__reset" onclick="resetTimer()"  class="u-hidden">入力を再開する</button>
+      </div> -->
+
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">同意</div>
+        <div class="o-c-input-section__contents">
+            <div
+            id="agree-text"
+            style="
+              /* width: 400px; */
+              border: 1px lightgrey solid;
+              padding: 1rem;
+              border-radius: 4px;
+              height: 500px;
+              /* overflow-x: auto; */
+              overflow-y: auto;
+              /* overflow-y: hidden; */
+              /* white-space: nowrap; */
+            "
+            onscroll="checkAgree_y()"
+          >
+        UIについての解説？<br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            explicabo ipsam, impedit vitae error minima cupiditate iusto,
+            accusamus doloribus vero culpa quibusdam. Distinctio cupiditate
+            doloribus autem adipisci nostrum ex error, quidem impedit omnis
+            labore, hic reiciendis, perferendis nulla nemo dignissimos laborum
+            saepe numquam voluptas esse. Perspiciatis corporis eos ipsum? Culpa
+            ea voluptates eveniet ullam recusandae iste, explicabo architecto
+            beatae ab facilis est atque in blanditiis rerum deserunt quisquam ad
+            animi nisi corporis? Culpa necessitatibus magnam officiis. Beatae
+            tenetur ex, consequuntur, alias tempore dolores quasi harum ad
+            cupiditate reiciendis hic? In accusantium blanditiis alias nesciunt,
+            quod ducimus. Incidunt fuga libero nisi voluptatibus quibusdam omnis
+            quod, mollitia eius iure, similique architecto laudantium quos,
+            praesentium inventore assumenda odio minus deserunt sit aliquid.
+            Quis rerum facilis sequi velit quos odit numquam fuga ad iste,
+            reiciendis, accusantium expedita recusandae vero vel repellat amet
+            nesciunt officiis, possimus molestias fugiat at. Velit, voluptatibus
+            quae sed tempore amet in. Dolor omnis sunt enim, earum magnam
+            voluptates similique alias officia? Nostrum, iste dolores! Deserunt
+            dolorem molestiae cum alias animi nesciunt sint, nulla odit ratione
+            pariatur? Deserunt ea accusamus ex aperiam eum quibusdam aut dolor
+            dolorum deleniti debitis odit, maiores quam esse omnis modi
+            architecto dicta repudiandae necessitatibus molestiae sunt quae quis
+            temporibus quos a? Deserunt tempora ipsam aut non eveniet asperiores
+            quis pariatur. Optio quibusdam voluptas, perferendis exercitationem
+            corporis iusto eius voluptatum omnis consequatur, incidunt, suscipit
+            quo libero rem laborum iure neque error aliquid pariatur nihil
+            minima hic tempore quidem? Tempore, quam distinctio repudiandae
+            magnam dignissimos sit deleniti! Veritatis provident, assumenda
+            beatae rerum asperiores maiores libero laudantium sunt officiis
+            voluptatem in similique ducimus debitis id earum recusandae cumque
+            illo natus numquam. Assumenda minus itaque officiis veniam laborum
+            atque odit repellendus eligendi mollitia perspiciatis id quo
+            tempora, delectus modi et odio voluptatibus alias! Dolorum minima
+            ducimus quis autem porro quibusdam iste inventore accusantium
+            incidunt excepturi aspernatur pariatur, laboriosam non aliquam vel
+            cum illum magni! Corrupti totam rem suscipit eius ut quod, similique
+            repellendus ex cupiditate? Doloremque ea ullam repudiandae, quaerat
+            ipsum consequatur? Itaque ea sapiente adipisci, animi dolores magni
+            vitae. Doloremque deleniti placeat optio nemo qui esse ea, animi
+            debitis tempora exercitationem nam tempore blanditiis error facere
+            laboriosam delectus, libero minima veniam quibusdam suscipit harum!
+            Maxime unde inventore, fuga voluptatibus modi eveniet velit animi
+            quam et id culpa impedit similique. Deleniti mollitia vitae earum
+            placeat dolorum repudiandae consectetur itaque laudantium at,
+            aperiam, nulla quos eligendi assumenda necessitatibus recusandae
+            provident asperiores!
+          </div>
+
+          <div id="input-agree" style="margin: 1rem">
+            <label id="agree-checkbox-label" for="agree">同意しない</label>
+            <input
+              checked
+              disabled
+              type="checkbox"
+              name="agree"
+              id="not-agree-check"
+              style="border: #e3e3e3 1px solid"
+            />
+            <p class="o-c-sub-info" id="agree-checkbox-info"  style="display: none">
+              同意してください！
+            </p>
+          </div>
+
+
+        </div>       
+      </section>
+
+      <div class="o-c-dialog o-p-page3-confirm-dialog" id="o-p-page3-confirm-dialog" style="display: none" >
+        <div class="o-p-page3-confirm-dialog__content">
+          <img id="attention-img" src="./asset/img/attention.png" alt="" srcset="">
+          <p>本当に入力内容を確認しますか？</p>
+          <ul>
+            <button class="o-p-page3-confirm-dialog__content__btn" onclick="confirmCancel()">Cancel</button>
+            <button class="o-p-page3-confirm-dialog__content__btn" onclick="nextPage()">Accept</button>
+            <button class="o-p-page3-confirm-dialog__content__btn" onclick="nextPage()">OK</button>
+          </ul>           
+
+
+        </div>
+      </div>
+
+    
+    
+    </main>
+
+    <div class="o-c-page-btn" id="o-p-page3-btn">
+      <button id="o-p-page3-btn__arrow" onclick="moveArrow()"> >> </button>
+      <button id="o-p-page3-btn__confirm" onclick="confirmDialog()">　確認　</button>
+      <button onclick="prePage()">戻る</button>
+    </div>
+  </body>
+  <script src="./asset/js/common.js"></script>
+  <script src="./asset/js/page3.js"></script>
+  <script src="./asset/js/timer.js"></script>
+</html>

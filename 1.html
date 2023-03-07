@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認知症世界一周ツアー</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body class="l-m-page-body">
+    <header>
+      <div class="l-header">
+        <img src="./asset/img/site-title.png" alt="" />
+      </div>
+    </header>
+
+    <div class="l-m-background-map">
+      <img src="./asset/img/map.png" alt="" srcset="" />
+    </div>
+
+    <main class="l-main">
+      <nav class="o-c-nav">
+        <div class="o-c-nav__item state-1">
+          <div class="o-c-nav__item--num">1</div>
+          <div class="o-c-nav__item--text">ご説明</div>
+        </div>
+        <div class="o-c-nav__item state-2">
+          <div class="o-c-nav__item--num">2</div>
+          <div class="o-c-nav__item--text">日程の入力</div>
+        </div>
+        <div class="o-c-nav__item state-3">
+          <div class="o-c-nav__item--num">3</div>
+          <div class="o-c-nav__item--text">あなたの情報</div>
+        </div>
+        <div class="o-c-nav__item state-4">
+          <div class="o-c-nav__item--num">4</div>
+          <div class="o-c-nav__item--text">ご確認</div>
+        </div>
+      </nav>
+
+      <div class="countdown">
+        <span id="time" class="time countdown-timer">00:00.00</span>
+      </div>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">チェックイン</div>
+        <div class="o-c-input-section__contents o-p-date-sel">
+          <div class="o-p-date-sel__item">
+            <div id="y"></div>
+            <p>年</p>
+          </div>
+
+          <div class="o-p-date-sel__item">
+            <div id="m"></div>
+            <p>月</p>
+          </div>
+          <div class="o-p-date-sel__item">
+            <div id="d"></div>
+            <p>日</p>
+          </div>
+          <div class="o-p-date-sel__item">
+            <div id="wd"></div>
+            <p>曜</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">チェックアウト</div>
+        <div class="o-c-input-section__contents" id="o-p-checkout">
+            <input type="range" min="1" max="41" value="3" class="slider" id="o-p-checkout__slider">
+            <p id="o-p-checkout-slider__text">2月31日</p>
+        </div>
+      </section>
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">ご予約人数</div>
+        <div class="o-c-input-section__contents" id="people"></div>
+      </section>
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">行き先のご希望</div>
+        <div class="o-c-input-section__contents" id="goto"></div>
+      </section>
+    </main>
+
+    <div class="o-c-page-btn">
+      <button onclick="nextPage()">次へ</button>
+      <button onclick="prePage()">戻る</button>
+      <!-- <button onclick="reset()">リセット</button> -->
+    </div>
+  </body>
+  <script src="./asset/js/common.js"></script>
+  <script src="./asset/js/page1.js"></script>
+  <script src="./asset/js/timer.js"></script>
+</html>

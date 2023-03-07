@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>認知症世界一周ツアー</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+
+    <div id="o-p-background">
+        <img src="asset/img/map.png" alt="">
+    </div>
+
+    <div id="o-p-site-title">
+        <img src="asset/img/site-title.png" alt="" srcset="">
+    </div>
+    <div id="o-p-tabibito">
+        <img src="asset/img/tabibito.png" alt="" srcset="">
+    </div>
+
+    <div id="o-p-intro">
+        <div id="o-p-intro__text">こんにちは！<br>
+            旅人とゆく「認知症世界一周ツアー」<span id="o-p-intro__text--fake">申し込みページ</span>です。お申し込みされる方は、次の<span id="o-p-intro__text--true" onclick="openNextPage()">ページ</span>を押してください!
+        </div>
+            <div id="o-p-intro__btn" onclick="openDialog()">
+                行かない
+            </div>
+    </div>
+
+    <div id="o-p-toppage-dialog" class="o-c-dialog" style="display: none">
+            <p>そんなこと言わないで進みましょう！</p>
+            <button id="o-p-toppage-dialog__ok">OK</button>
+            <div id="o-p-toppage-dialog__close"><p>Close</p></div>
+            <div id="o-p-toppage-dialog__rotate">
+              <img src="./asset/img/rotate.png" alt="" srcset="" />
+            </div>     
+
+
+    </div>
+
+    <script src="asset/js/top.js"></script>
+</body>
+</html>

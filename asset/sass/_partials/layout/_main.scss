@@ -1,0 +1,46 @@
+@use "../foundation/var-mixin"as *;
+
+.l-m-page-body {
+    background-color: $bg-color;
+}
+
+
+//main 是input页的白色部分。
+.l-main {
+
+    border-radius: $main-border-r;
+    margin: 6.5rem auto;
+
+    margin-bottom: 2rem;
+    width: 80%;
+    background-color: white;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.l-m-background-map {
+    
+    width: 100%;
+    overflow: hidden;
+
+    img {
+
+        opacity: .9;
+
+        z-index: -2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 1000px;
+        width: 100%;
+        filter: blur(2px);
+      
+        object-fit: cover;
+    }
+}

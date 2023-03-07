@@ -1,0 +1,13 @@
+@use '../foundation/var-mixin'as *;
+
+.l-footer {
+    // position: fixed;
+    // left: 0;
+    background-color: $bg-yellow;
+    width: 100%;
+
+    p {
+        text-align: right;
+        padding: 1rem;
+    }
+}

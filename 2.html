@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>認知症世界一周ツアー</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body class="l-m-page-body">
+    <header>
+      <div class="l-header">
+        <img src="./asset/img/site-title.png" alt="" />
+      </div>
+    </header>
+
+    <div class="l-m-background-map">
+      <img src="./asset/img/map.png" alt="" srcset="" />
+    </div>
+
+    <main class="l-main">
+      <nav class="o-c-nav">
+        <div class="o-c-nav__item state-1">
+          <div class="o-c-nav__item--num">1</div>
+          <div class="o-c-nav__item--text">ご説明</div>
+        </div>
+        <div class="o-c-nav__item state-2">
+          <div class="o-c-nav__item--num">2</div>
+          <div class="o-c-nav__item--text">日程の入力</div>
+        </div>
+        <div class="o-c-nav__item state-3">
+          <div class="o-c-nav__item--num">3</div>
+          <div class="o-c-nav__item--text">あなたの情報</div>
+        </div>
+        <div class="o-c-nav__item state-4">
+          <div class="o-c-nav__item--num">4</div>
+          <div class="o-c-nav__item--text">ご確認</div>
+        </div>
+      </nav>
+
+      <div class="countdown">
+        <span id="time" class="time countdown-timer">00:00.00</span>
+      </div>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">お名前</div>
+        <div class="o-c-input-section__contents" id="o-p-name">
+        <div id="o-p-name__firstname"> <label for="first">名</label>　<input name="first" type="text" class="o-c-input-text"></div>    
+        <div  id="o-p-name__name"> <label for="last">姓</label>　<input type="text" name="last" class="o-c-input-text"></div>    
+        </div>       
+      </section>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">Furigana</div>
+        <div class="o-c-input-section__contents"> 
+            <input name="furigana" type="text" class="o-c-input-text">
+        </div>       
+      </section>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">性別</div>
+        <div class="o-c-input-section__contents" id="o-p-gender"> </div>       
+      </section>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">電話番号</div>
+        <div class="o-c-input-section__contents" id="o-p-phone-num"> </div>       
+      </section>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">メール</div>
+        <div class="o-c-input-section__contents" id="o-p-mail">
+            <input class="o-c-input-text" type="text" name="" id="" value=" e-mail" />
+            <p>@</p>
+            <!-- <input type="text" value=" domain" /> -->
+            <button class="o-c-input-btn" id="o-p-mail__btn1" onclick="changeDomain()">
+              domain
+            </button>
+            <button  class="o-c-input-btn" id="o-p-mail__btn2" onclick="changeExtensionName()">
+              .jpg
+            </button>
+        </div>       
+      </section>
+
+      <section class="o-c-input-section">
+        <div class="o-c-input-section__title">画像認証</div>
+        <div class="o-c-input-section__contents"> 
+
+            <p class="o-c-input-section__infotext">果物の画像だけ選んでください</p>
+            <ul id="o-p-confirm-test-ul">
+              <li><img src="./asset/img/confirmTest/tomato.png" alt="" srcset=""></li>
+              <li><img src="./asset/img/confirmTest/watermelon.png" alt="" srcset=""></li>
+              <li><img src="./asset/img/confirmTest/melon.png" alt="" srcset=""></li>
+              <li><img src="./asset/img/confirmTest/avocado.png" alt="" srcset=""></li>
+            </ul>
+        </div>       
+      </section>
+
+    
+    </main>
+
+    <div class="o-c-page-btn">
+        <button onclick="prePage()">戻る</button>
+        <button onclick="nextPage()">次へ</button>
+      <!-- <button onclick="reset()">リセット</button> -->
+    </div>
+  </body>
+  <script src="./asset/js/common.js"></script>
+  <script src="./asset/js/page2.js"></script>
+  <script src="./asset/js/timer.js"></script>
+</html>
