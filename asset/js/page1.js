@@ -99,7 +99,7 @@ const checkList = [
     "カクテルバーDANBO",
   ];
 
-  const tgtPos = document.querySelector('#goto');
+  const tgtPos = document.querySelector('#o-p-goto');
 for(let i=0;i<checkList.length;i++){
 
     createCheckbox(tgtPos,checkList[i],'');

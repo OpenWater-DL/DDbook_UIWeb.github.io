@@ -1,6 +1,8 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
+  font-family: "Helvetica Neue", "Helvetica", "游ゴシック", "MS Pゴシック", sans-serif;
 }
 
 p, div {
@@ -93,7 +95,7 @@ button {
   border-bottom: 1px solid lightgrey;
 }
 .o-c-nav__item {
-  --nav-main-color: #3484A4;
+  --nav-main-color: #2C8CB9;
   width: 50px;
   text-align: center;
   display: flex;
@@ -118,15 +120,20 @@ button {
   font-size: 0.9rem;
   line-height: 1rem;
 }
-.o-c-nav .state-1 .o-c-nav__item--num {
+.o-c-nav .state-pass .o-c-nav__item--num {
   background-color: white;
   border: 2px solid var(--nav-main-color);
   color: var(--nav-main-color);
 }
-.o-c-nav .state-2 .o-c-nav__item--num {
+.o-c-nav .state-active .o-c-nav__item--num {
   background-color: var(--nav-main-color);
   border: 2px solid var(--nav-main-color);
   color: white;
+}
+.o-c-nav .state-wait .o-c-nav__item--num {
+  background-color: #D3D3D4;
+  border: none;
+  color: black;
 }
 
 .o-c-input-section__title {
@@ -304,6 +311,32 @@ button {
   min-width: 200px;
   width: 60%;
   max-width: 300px;
+}
+
+#o-p-goto {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+#o-p-goto div {
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 50%;
+  height: 50px;
+  display: flex;
+  align-items: start;
+  padding-right: 8px;
+}
+#o-p-goto div label {
+  display: block;
+  white-space: wrap;
+  width: 100%;
+  text-align: right;
+  padding-left: 8px;
+}
+#o-p-goto div input {
+  background-color: blue;
 }
 
 #o-p-name {

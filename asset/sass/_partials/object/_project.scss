@@ -155,6 +155,48 @@
     }
 }
 
+
+
+
+#o-p-goto {
+
+    $space: 8px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    div {
+
+        box-sizing: border-box;
+        background-color: white;
+        flex: 0 0 50%;
+        height: 50px;
+        // border: 1px solid red;
+        //    background-color: #eb4c0d;
+
+        display: flex;
+        align-items: start;
+        padding-right:  $space;
+
+        label {
+            display: block;
+            white-space: wrap;
+            // background-color: #FFFF87;
+            width: 100%;
+            text-align: right;
+            padding-left:  $space;
+
+        }
+
+        input {
+            background-color: blue;
+        }
+
+    }
+
+}
+
 #o-p-name {
     display: flex;
     align-items: center;
@@ -376,8 +418,8 @@
     &.full-screen {
 
         height: 100vh;
-      
 
-           }
+
+    }
 
 }

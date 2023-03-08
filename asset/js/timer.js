@@ -13,7 +13,8 @@ const contentsHtml = `
 
 <div  id="o-p-countdown-dailog__time" class="countdown-timer">00:30:00</div>
 <div  id="o-p-countdown-dailog__close">
-<img src="asset/img/full-screen.png" alt="" srcset="">
+<img id="o-p-countdown-dailog__close__img1" src="asset/img/full-screen.png" alt="" srcset="">
+<img id="o-p-countdown-dailog__close__img2" src="asset/img/min.png"  class="u-hidden" alt="" srcset="">
 </div>
 
 <button  id="o-p-countdown-dailog__reset" onclick="resetTimer()"  class="u-hidden">入力を再開する</button>
@@ -21,6 +22,7 @@ const contentsHtml = `
 
 dailogEl.innerHTML = contentsHtml;
 document.body.appendChild(dailogEl);
+
 
 
 
@@ -137,8 +139,13 @@ function Countdown(elem, seconds,dailogAppearTime) {
 //timer close btn
 
 const closeBtn = document.querySelector("#o-p-countdown-dailog__close");
+const closeBtnImg_full = document.querySelector("#o-p-countdown-dailog__close__img1");
+const closeBtnImg_min = document.querySelector("#o-p-countdown-dailog__close__img2");
 closeBtn.addEventListener('click',()=>{
     const dailog = document.querySelector('#o-p-countdown-dailog');
     dailog.classList.toggle('full-screen');
+    closeBtnImg_full.classList.toggle('u-hidden');
+    closeBtnImg_min.classList.toggle('u-hidden');
+
 
 })
