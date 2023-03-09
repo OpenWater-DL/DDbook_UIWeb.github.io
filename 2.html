@@ -30,7 +30,7 @@
         </div>
         <div class="o-c-nav__item state-active">
           <div class="o-c-nav__item--num">3</div>
-          <div class="o-c-nav__item--text">あなたの情報</div>
+          <div class="o-c-nav__item--text">ご予約者情報</div>
         </div>
         <div class="o-c-nav__item state-wait">
           <div class="o-c-nav__item--num">4</div>
@@ -43,32 +43,39 @@
       </div>
 
       <section class="o-c-input-section">
-        <div class="o-c-input-section__title">お名前</div>
+        <div class="o-c-input-section__title">ご予約者情報</div>
+
+      <section class="o-c-input-section--sub">
+        <div class="o-c-input-section--sub__title">お名前</div>
         <div class="o-c-input-section__contents" id="o-p-name">
         <div id="o-p-name__firstname"> <label for="first">名</label>　<input name="first" type="text" class="o-c-input-text"></div>    
         <div  id="o-p-name__name"> <label for="last">姓</label>　<input type="text" name="last" class="o-c-input-text"></div>    
-        </div>       
+        </div>    
+        
+        
       </section>
+     
+        
 
-      <section class="o-c-input-section">
-        <div class="o-c-input-section__title">Furigana</div>
+      <section class="o-c-input-section--sub">
+        <div class="o-c-input-section--sub__title">Furigana</div>
         <div class="o-c-input-section__contents"> 
             <input name="furigana" type="text" class="o-c-input-text">
         </div>       
       </section>
 
-      <section class="o-c-input-section">
-        <div class="o-c-input-section__title">性別</div>
+      <section class="o-c-input-section--sub">
+        <div class="o-c-input-section--sub__title">性別</div>
         <div class="o-c-input-section__contents" id="o-p-gender"> </div>       
       </section>
 
-      <section class="o-c-input-section">
-        <div class="o-c-input-section__title">電話番号</div>
+      <section class="o-c-input-section--sub">
+        <div class="o-c-input-section--sub__title">電話番号</div>
         <div class="o-c-input-section__contents" id="o-p-phone-num"> </div>       
       </section>
 
-      <section class="o-c-input-section">
-        <div class="o-c-input-section__title">メール</div>
+      <section class="o-c-input-section--sub">
+        <div class="o-c-input-section--sub__title">メールアドレス</div>
         <div class="o-c-input-section__contents" id="o-p-mail">
             <input class="o-c-input-text" type="text" name="" id="" value=" e-mail" />
             <p>@</p>
@@ -82,8 +89,10 @@
         </div>       
       </section>
 
+    </section>
+
       <section class="o-c-input-section">
-        <div class="o-c-input-section__title">画像認証</div>
+        <div class="o-c-input-section__title">セキュリティ認証</div>
         <div class="o-c-input-section__contents"> 
 
             <p class="o-c-input-section__infotext">果物の画像だけ選んでください</p>
@@ -91,9 +100,10 @@
               <li><img src="./asset/img/confirmTest/tomato.png" alt="" srcset=""></li>
               <li><img src="./asset/img/confirmTest/watermelon.png" alt="" srcset=""></li>
               <li><img src="./asset/img/confirmTest/melon.png" alt="" srcset=""></li>
-              <li><img src="./asset/img/confirmTest/avocado.png" alt="" srcset=""></li>
+              <li id="avocado"><img src="./asset/img/confirmTest/avocado.png" alt="" srcset=""></li>
             </ul>
-        </div>       
+        </div>   
+         <p class="o-c-sub-info u-hidden" id="info-avocado">アボカドは果物です。</p>   
       </section>
 
     

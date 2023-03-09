@@ -9,3 +9,17 @@
 .u-block{
     display: block;
 }
+
+
+
+.u-fade{
+    transition: 1s ease-in-out;
+}
+.u-fade-in{
+
+    opacity: 1.0;
+}
+
+.u-fade-out{
+    opacity: 0.0;
+}

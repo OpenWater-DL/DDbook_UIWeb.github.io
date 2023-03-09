@@ -21,50 +21,224 @@
     }
 }
 
-#o-p-site-title {
 
+.o-p-pre-img {
+    width: 100vw;
+    // height: 100vw;
     position: absolute;
+    top: 0;
+    left: 0;
+
+    ul {
+        margin: 0;
+    }
+
+    &--mb {
+
+        li {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+
+}
+
+
+
+$rootPath:'../../../..';
+
+
+
+
+#o-p-pre-img--mb {
+    display: none;
+}
+
+#o-p-pre-img--pc {
+    display: block;
+    width: 100vw;
+    height: 65vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    animation: pc-fader 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+
+}
+
+
+
+@media (max-width:$breakpoints) {
+
+    //在最大宽度是450px的情况下（浏览器宽度 <= 450px）
+    //mobile mode
+    #o-p-pre-img--mb {
+        display: block;
+        width: 100vw;
+        height: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #eb4c0d;
+
+
+        animation: mb-fader 15s cubic-bezier(0.075, 0.82, 0.165, 1) infinite;
+
+    }
+
+    #o-p-pre-img--pc {
+        display: none;
+    }
+
+}
+
+
+@keyframes mb-fader {
+
+    // $rootPath:'../../../..';
+    0% {
+        background: url($rootPath+'/asset/img/main_img/sp1.png');
+        background-size: cover;
+    }
+
+    20% {
+        background: url($rootPath+'/asset/img/main_img/sp2.png');
+        background-size: cover;
+    }
+
+    40% {
+        background: url($rootPath+'/asset/img/main_img/sp3.png');
+        background-size: cover;
+    }
+
+    60% {
+        background: url($rootPath+'/asset/img/main_img/sp4.png');
+        background-size: cover;
+    }
+
+    80% {
+        background: url($rootPath+'/asset/img/main_img/sp5.png');
+        background-size: cover;
+    }
+
+    100% {
+        background: url($rootPath+'/asset/img/main_img/sp1.png');
+        background-size: cover;
+    }
+
+
+
+}
+
+
+@keyframes pc-fader {
+
+    0% {
+        background: url($rootPath+'/asset/img/main_img/pc1.png');
+        background-size: cover;
+    }
+
+    20% {
+        background: url($rootPath+'/asset/img/main_img/pc2.png');
+        background-size: cover;
+    }
+
+    40% {
+        background: url($rootPath+'/asset/img/main_img/pc3.png');
+        background-size: cover;
+    }
+
+    60% {
+        background: url($rootPath+'/asset/img/main_img/pc4.png');
+        background-size: cover;
+    }
+
+    80% {
+        background: url($rootPath+'/asset/img/main_img/pc5.png');
+        background-size: cover;
+    }
+
+    100% {
+        background: url($rootPath+'/asset/img/main_img/pc1.png');
+        background-size: cover;
+    }
+}
+
+
+
+
+#o-p-site-title {
+    z-index: 2;
+    position: absolute;
+    transform: translate(-50%, -50%);
     left: 50%;
-    transform: translate(-50%);
-    top: 1rem;
+    bottom:40%;
+    width: 90%;
+    text-align: center;
 
     img {
+        width: 100%;
         max-width: 400px;
     }
 
-}
-
-#o-p-tabibito {
-    z-index: 2;
-    width: 200px;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    img {
-
-        width: 100%;
+    @media (min-width:$breakpoints) {
+        //pc
+        z-index: 2;
+        position: absolute;
+        height: fit-content;
+        
+        transform: translate(-50%, -50%);
+        bottom: 10rem;
     }
 
 }
+
+
+
+
+
 
 #o-p-intro {
     position: absolute;
     bottom: 0;
     background-color: #FFFF87;
-    height: fit-content;
+    height: 50vh;
     width: 100%;
     text-align: center;
+
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
 
+
     &__text {
-        margin: 1rem;
+        // background-color: #eb4c0d;
+
+        // flex: 1;
+        margin: 0 2.5rem;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
         font-size: .9rem;
+        line-height: 1.8rem;
+
+        display: flex;
+        align-items: center;
+
 
         &--fake {
             color: $blue;
@@ -77,6 +251,7 @@
     }
 
     &__btn {
+
         // position: absolute;
         // bottom: 1rem;
         // left: 50%;
@@ -84,15 +259,85 @@
         background-color: orange;
         color: white;
         font-size: 10px;
-        width: fit-content;
+        width: 70px;
         padding: 1rem;
         border-radius: 2rem;
         cursor: pointer;
     }
+
+
+    &__kikaku {
+        flex: 10%;
+        font-size: .6rem;
+        display: flex;
+        color: rgb(102, 102, 102);
+        align-items: center;
+        // background-color: #eb4c0d;
+
+    }
+
+    &__copyright {
+        flex: 10%;
+        font-size: .6rem;
+        color: rgb(102, 102, 102);
+
+        // background-color: blue;
+
+    }
+
+
+
+    @media (min-width:$breakpoints) {
+        //pc
+        height: 15rem;
+
+
+        &__kikaku {
+            position: absolute;
+            bottom: 1.9rem;
+            // right: 2rem;
+            left: 50%;
+            transform: translate(-50%);
+           
+            font-size: .6rem;
+            display: flex;
+            color: rgb(102, 102, 102);
+            // color: red;
+
+            align-items: center;
+            // background-color: #eb4c0d;
+    
+        }
+    
+        &__copyright {
+            position: absolute;
+            bottom: .8rem;
+            // right:  2rem;
+
+            left: 50%;
+            transform: translate(-50%);
+         
+            font-size: .6rem;
+            color: rgb(102, 102, 102);
+    
+            // background-color: blue;
+    
+        }
+
+    }
+
+
 }
+
+
+
+
+
+
 
 #o-p-toppage-dialog {
     // padding: 0;
+    top: 30%;
     margin-bottom: 0 !important;
     width: 320px;
     margin: 0;
@@ -171,13 +416,13 @@
         box-sizing: border-box;
         background-color: white;
         flex: 0 0 50%;
-        height: 50px;
+        // height: 2rem;
         // border: 1px solid red;
         //    background-color: #eb4c0d;
 
         display: flex;
         align-items: start;
-        padding-right:  $space;
+        padding-right: $space;
 
         label {
             display: block;
@@ -185,7 +430,7 @@
             // background-color: #FFFF87;
             width: 100%;
             text-align: right;
-            padding-left:  $space;
+            padding-left: $space;
 
         }
 

@@ -30,7 +30,7 @@
         </div>
         <div class="o-c-nav__item state-wait">
           <div class="o-c-nav__item--num">3</div>
-          <div class="o-c-nav__item--text">あなたの情報</div>
+          <div class="o-c-nav__item--text">ご予約者情報</div>
         </div>
         <div class="o-c-nav__item state-wait">
           <div class="o-c-nav__item--num">4</div>
@@ -43,7 +43,11 @@
       </div>
 
       <section class="o-c-input-section">
-        <div class="o-c-input-section__title">チェックイン</div>
+        
+        <div  class="o-c-input-section__title">ご予約日</div> 
+        
+        <section class="o-c-input-section--sub">
+        <div class="o-c-input-section--sub__title">出発日</div>
         <div class="o-c-input-section__contents o-p-date-sel">
           <div class="o-p-date-sel__item">
             <div id="y"></div>
@@ -65,27 +69,34 @@
         </div>
       </section>
 
-      <section class="o-c-input-section">
-        <div class="o-c-input-section__title">チェックアウト</div>
-        <div class="o-c-input-section__contents" id="o-p-checkout">
-            <input type="range" min="1" max="41" value="3" class="slider" id="o-p-checkout__slider">
-            <p id="o-p-checkout-slider__text">2月31日</p>
-        </div>
+        <section class="o-c-input-section--sub">
+          <div class="o-c-input-section--sub__title">復路出発日</div>
+          <div class="o-c-input-section__contents" id="o-p-checkout">
+              <input type="range" min="1" max="41" value="3" class="slider" id="o-p-checkout__slider">
+              <p id="o-p-checkout-slider__text">2月31日</p>
+          </div>
+        </section>
+
       </section>
+
+
       <section class="o-c-input-section">
         <div class="o-c-input-section__title">ご予約人数</div>
         <div class="o-c-input-section__contents" id="people"></div>
       </section>
       <section class="o-c-input-section">
         <div class="o-c-input-section__title">行き先のご希望</div>
+        
+        <p class="o-c-input-section__infotext">ツアーの行き先として、ご希望のスポットを3つお選びください。</p>
         <div class="o-c-input-section__contents" id="o-p-goto"></div>
+
       </section>
     </main>
 
     <div class="o-c-page-btn">
       <button onclick="nextPage()">次へ</button>
       <button onclick="prePage()">戻る</button>
-      <!-- <button onclick="reset()">リセット</button> -->
+      <button onclick="reset()">リセット</button>
     </div>
   </body>
   <script src="./asset/js/common.js"></script>

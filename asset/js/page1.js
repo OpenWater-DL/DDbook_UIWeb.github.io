@@ -6,7 +6,7 @@ createY();
 function createY(){
     let tgt = document.querySelector('#y');
     let YArr = createNumListOption(1900,2023);
-    createSelectList(YArr,tgt,'mySelect')
+    createSelectList(YArr,tgt,'y-select')
 }
 
 createM();
@@ -20,14 +20,14 @@ createD();
 function createD(){
     let tgt = document.querySelector('#d');
     let DArr = createNumListOption(1,31);
-    createSelectList(DArr,tgt,'mySelect')
+    createSelectList(DArr,tgt,'d-select')
 }
 
 createW();
 function createW(){
     let tgt = document.querySelector('#wd');
     const WArr = ['月','火','水','木','金','土','日']
-    createSelectList(WArr,tgt,'mySelect')
+    createSelectList(WArr,tgt,'wd-select')
 }
 
 function createNumListOption(from,to){
@@ -77,7 +77,7 @@ function createPeopleSel(){
    "大人0人　子供3人",
    "大人3人　子供1人"]
 
-    createSelectList(peopleArr,tgt,'mySelect')
+    createSelectList(peopleArr,tgt,'people-select')
 
 }
 
@@ -113,4 +113,37 @@ function nextPage(){
 
 function prePage(){
     window.open('index.html','_self')
+}
+
+
+function reset(){
+
+
+const gotoDiv = document.querySelector('#o-p-goto')
+
+
+for(item of gotoDiv.children ){
+   item.querySelector('input').checked = false;
+
+}
+
+const peopleSel = document.querySelector('#people-select')
+peopleSel.value='大人1人　子供1人'
+
+const checkOutSlider = document.querySelector('#o-p-checkout__slider')
+checkOutSlider.value=1;
+
+document.querySelector('#o-p-checkout-slider__text').innerText = '1月1日';
+
+
+let y = document.querySelector('#y-select');
+let m = document.querySelector('#m-select');
+let d = document.querySelector('#d-select');
+let wd = document.querySelector('#wd-select');
+
+y.value = '1900'
+m.value = '1'
+d.value = '1'
+wd.value = '月'
+
 }

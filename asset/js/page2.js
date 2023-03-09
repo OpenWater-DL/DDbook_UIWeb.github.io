@@ -84,7 +84,19 @@ function confiremTest(){
 
 
 function nextPage(){
-    window.open('3.html','_self')
+
+  const avocado = document.querySelector('#avocado');
+    if(avocado.classList.contains('selected')){
+
+      window.open('3.html','_self')
+    }else{
+
+      document.querySelector('#info-avocado').classList.remove('u-hidden');
+
+    }
+
+
+  
 }
 
 function prePage(){
