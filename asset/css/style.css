@@ -288,29 +288,29 @@ button {
     background-size: cover;
   }
   20% {
-    background: url("../asset/img/main_img/sp2.png");
+    background: url("../img/main_img/sp2.png");
     background-size: cover;
   }
   40% {
-    background: url("../asset/img/main_img/sp3.png");
+    background: url("../img/main_img/sp3.png");
     background-size: cover;
   }
   60% {
-    background: url("../asset/img/main_img/sp4.png");
+    background: url("../img/main_img/sp4.png");
     background-size: cover;
   }
   80% {
-    background: url("../asset/img/main_img/sp5.png");
+    background: url("../img/main_img/sp5.png");
     background-size: cover;
   }
   100% {
-    background: url("../asset/img/main_img/sp1.png");
+    background: url("../img/main_img/sp1.png");
     background-size: cover;
   }
 }
 @keyframes pc-fader {
   0% {
-    background: url("../asset/img/main_img/pc1.png");
+    background: url("../img/main_img/pc1.png");
     background-size: cover;
   }
   20% {
