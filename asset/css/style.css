@@ -284,7 +284,7 @@ button {
 }
 @keyframes mb-fader {
   0% {
-    background: url(./asset/img/main_img/sp1.png");
+    background: url(./DDbook_UIWeb.github.io/asset/img/main_img/sp1.png");
     background-size: cover;
   }
   20% {
