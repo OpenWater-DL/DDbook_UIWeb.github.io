@@ -97,7 +97,7 @@ function Countdown(elem, seconds,dailogAppearTime) {
   }
   
   // 初次的时间规则
-  let timerOffsetTime =  400000;
+  let timerOffsetTime =  40;
   let dailogShowTime = 30; // timer count to this time,appear dailog
   var timer_in_mian = document.getElementById('time');
   var timer_in_dailog = document.getElementById('o-p-countdown-dailog__time');
