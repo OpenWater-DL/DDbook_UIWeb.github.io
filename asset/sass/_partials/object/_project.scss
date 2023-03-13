@@ -105,7 +105,7 @@
 }
 
 // $rootPath:'../../../..';
-$rootPath:'';
+$rootPath:'.';
 
 @keyframes mb-fader {
 
@@ -113,6 +113,7 @@ $rootPath:'';
         background: url($rootPath+'/asset/img/main_img/sp1.png');
         background-size: cover;
     }
+
 
     20% {
         background: url($rootPath+'/asset/img/main_img/sp2.png');
