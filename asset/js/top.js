@@ -44,3 +44,34 @@ function dialog(){
 
   
 }
+
+
+
+preloadImg();
+function preloadImg(){
+  let unshowImgs = document.createElement('div')
+  unshowImgs.style.display='none';
+
+  for(let i=1;i<=5;i++){
+    let imgEl = document.createElement('img')
+    imgEl.src= './asset/img/main_img/sp'+i+'.png';
+    imgEl.style.display='none';
+
+  unshowImgs.appendChild(imgEl)
+
+  }
+
+
+  for(let i=1;i<=5;i++){
+    let imgEl = document.createElement('img')
+    imgEl.src= './asset/img/main_img/pc'+i+'.png';
+    imgEl.style.display='none';
+
+  unshowImgs.appendChild(imgEl)
+
+  }
+
+  document.body.appendChild(unshowImgs)
+ 
+
+}
