@@ -109,7 +109,6 @@ $rootPath:'';
 
 @keyframes mb-fader {
 
-    // $rootPath:'../../../..';
     0% {
         background: url($rootPath+'/asset/img/main_img/sp1.png');
         background-size: cover;
@@ -267,11 +266,12 @@ $rootPath:'';
     }
 
 
+    $textColor_sub:#666666;
     &__kikaku {
         flex: 10%;
-        font-size: .6rem;
+        font-size: 9px;
         display: flex;
-        color: rgb(102, 102, 102);
+        color: $textColor_sub;
         align-items: center;
         // background-color: #eb4c0d;
 
@@ -279,8 +279,8 @@ $rootPath:'';
 
     &__copyright {
         flex: 10%;
-        font-size: .6rem;
-        color: rgb(102, 102, 102);
+        font-size: 9px;
+        color: $textColor_sub;
 
         // background-color: blue;
 
@@ -302,7 +302,7 @@ $rootPath:'';
            
             font-size: .6rem;
             display: flex;
-            color: rgb(102, 102, 102);
+            // color: rgb(102, 102, 102);
             // color: red;
 
             align-items: center;
@@ -319,7 +319,7 @@ $rootPath:'';
             transform: translate(-50%);
          
             font-size: .6rem;
-            color: rgb(102, 102, 102);
+            // color: rgb(102, 102, 102);
     
             // background-color: blue;
     
@@ -345,12 +345,12 @@ $rootPath:'';
     transition: .6s ease-in-out;
 
     p {
-        margin-top: 1rem;
+        margin-top: 2em;
 
     }
 
     &__close {
-        color: gray;
+        color: rgb(227, 227, 227);
         // background-color: #FFFF87;
         text-align: left;
         margin-left: .5rem;
@@ -362,7 +362,7 @@ $rootPath:'';
 
     &__rotate {
         position: absolute;
-        bottom: .7rem;
+        top: .7rem;
         right: 1rem;
         cursor: pointer;
     }

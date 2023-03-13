@@ -3,11 +3,31 @@
 .l-footer {
     // position: fixed;
     // left: 0;
-    background-color: $bg-yellow;
+    position: relative;
     width: 100%;
+    background-color: $bg-yellow;
 
-    p {
-        text-align: right;
-        padding: 1rem;
+    #footer-container{
+//    box-sizing: border-box;
+//         // padding: 32px;
+//    width: 80%;
+
+   @include main-width;
+
+
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    //  background-color: rgb(160, 160, 223);
+        height: 157px;
+    
+        p {
+            color: #666666;
+            font-size: 14px;
+            align-self: center;
+            text-align: left;
+          
+        }
     }
+   
 }

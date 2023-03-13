@@ -16,12 +16,24 @@ ul {
 }
 
 .l-footer {
-  background-color: #FFEA7A;
+  position: relative;
   width: 100%;
+  background-color: #FFEA7A;
 }
-.l-footer p {
-  text-align: right;
-  padding: 1rem;
+.l-footer #footer-container {
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 157px;
+}
+.l-footer #footer-container p {
+  color: #666666;
+  font-size: 14px;
+  align-self: center;
+  text-align: left;
 }
 
 .l-header {
@@ -37,14 +49,22 @@ ul {
 }
 
 .l-m-page-body {
-  background-color: #00A5DC;
+  background-color: #01ADE1;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .l-main {
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1200px;
   border-radius: 8px;
   margin: 6.5rem auto;
   margin-bottom: 2rem;
-  width: 80%;
   background-color: white;
   padding: 2rem;
   display: flex;
@@ -53,16 +73,18 @@ ul {
 }
 
 .l-m-background-map {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 1400px;
   width: 100%;
-  overflow: hidden;
+  height: 700px;
+  z-index: -2;
 }
 .l-m-background-map img {
   opacity: 0.9;
   z-index: -2;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   height: 1000px;
   width: 100%;
   filter: blur(2px);
@@ -143,7 +165,7 @@ button {
   display: flex;
   align-items: center;
 }
-.o-c-input-section__title::before {
+o-c-page-btn .o-c-input-section__title::before {
   content: "-";
   display: inline-block;
   width: 10px;
@@ -166,7 +188,9 @@ button {
 }
 
 .o-c-page-btn {
-  width: calc(80vw + 3rem);
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   margin-bottom: 2rem;
   display: flex;
@@ -296,41 +320,41 @@ button {
     background-size: cover;
   }
   60% {
-    background: url("../../../../asset/img/main_img/sp4.png");
+    background: url("/asset/img/main_img/sp4.png");
     background-size: cover;
   }
   80% {
-    background: url("../../../../asset/img/main_img/sp5.png");
+    background: url("/asset/img/main_img/sp5.png");
     background-size: cover;
   }
   100% {
-    background: url("../../../../asset/img/main_img/sp1.png");
+    background: url("/asset/img/main_img/sp1.png");
     background-size: cover;
   }
 }
 @keyframes pc-fader {
   0% {
-    background: url("../../../../asset/img/main_img/pc1.png");
+    background: url("/asset/img/main_img/pc1.png");
     background-size: cover;
   }
   20% {
-    background: url("../../../../asset/img/main_img/pc2.png");
+    background: url("/asset/img/main_img/pc2.png");
     background-size: cover;
   }
   40% {
-    background: url("../../../../asset/img/main_img/pc3.png");
+    background: url("/asset/img/main_img/pc3.png");
     background-size: cover;
   }
   60% {
-    background: url("../../../../asset/img/main_img/pc4.png");
+    background: url("/asset/img/main_img/pc4.png");
     background-size: cover;
   }
   80% {
-    background: url("../../../../asset/img/main_img/pc5.png");
+    background: url("/asset/img/main_img/pc5.png");
     background-size: cover;
   }
   100% {
-    background: url("../../../../asset/img/main_img/pc1.png");
+    background: url("/asset/img/main_img/pc1.png");
     background-size: cover;
   }
 }
@@ -397,15 +421,15 @@ button {
 }
 #o-p-intro__kikaku {
   flex: 10%;
-  font-size: 0.6rem;
+  font-size: 9px;
   display: flex;
-  color: rgb(102, 102, 102);
+  color: #666666;
   align-items: center;
 }
 #o-p-intro__copyright {
   flex: 10%;
-  font-size: 0.6rem;
-  color: rgb(102, 102, 102);
+  font-size: 9px;
+  color: #666666;
 }
 @media (min-width: 600px) {
   #o-p-intro {
@@ -418,7 +442,6 @@ button {
     transform: translate(-50%);
     font-size: 0.6rem;
     display: flex;
-    color: rgb(102, 102, 102);
     align-items: center;
   }
   #o-p-intro__copyright {
@@ -427,7 +450,6 @@ button {
     left: 50%;
     transform: translate(-50%);
     font-size: 0.6rem;
-    color: rgb(102, 102, 102);
   }
 }
 
@@ -439,10 +461,10 @@ button {
   transition: 0.6s ease-in-out;
 }
 #o-p-toppage-dialog p {
-  margin-top: 1rem;
+  margin-top: 2em;
 }
 #o-p-toppage-dialog__close {
-  color: gray;
+  color: rgb(227, 227, 227);
   text-align: left;
   margin-left: 0.5rem;
   margin-bottom: 0.3rem;
@@ -452,7 +474,7 @@ button {
 }
 #o-p-toppage-dialog__rotate {
   position: absolute;
-  bottom: 0.7rem;
+  top: 0.7rem;
   right: 1rem;
   cursor: pointer;
 }

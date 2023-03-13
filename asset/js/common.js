@@ -9,7 +9,12 @@ createFooter();
 function createFooter(){
     const footer = document.createElement('footer')
     footer.classList.add('l-footer')
-    footer.innerHTML = `<p>© 2023 認知症世界一周ツアー</p>`
+    footer.innerHTML = `
+    <div id="footer-container">
+    <p>「認知症世界の歩き方 実践編」ART：認知症世界を体験してみよう</p>
+    <p>© 2023 認知症世界一周ツアー</p>
+    </div>
+   `
     document.body.appendChild(footer);
 }
 

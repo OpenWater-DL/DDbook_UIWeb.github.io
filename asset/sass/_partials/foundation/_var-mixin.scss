@@ -7,3 +7,9 @@ $obj-border-r:8px;
 
 
 $breakpoints: 600px;
+
+@mixin main-width(){
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 1200px;
+}

@@ -7,7 +7,7 @@ let dialog_rotateDeg = 0
 
 function openDialog(){
    
-    document.querySelector("#o-p-toppage-dialog").style.display="block";
+    document.querySelector("#o-p-toppage-dialog").classList.remove('u-hidden');
 
 }
 

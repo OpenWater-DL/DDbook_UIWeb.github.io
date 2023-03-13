@@ -107,7 +107,7 @@ button {
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
-
+        o-c-page-btn
         &::before {
             content: "-";
             display: inline-block;
@@ -141,7 +141,13 @@ button {
 
 
 .o-c-page-btn {
-    width: calc(80vw + 3rem);
+    // box-sizing: border-box;
+    // // width: calc(80vw);
+    // width:80%;
+    // max-width: 1000px;
+
+    @include main-width;
+
     margin: 0 auto;
     margin-bottom: 2rem;
     // background-color: black;
