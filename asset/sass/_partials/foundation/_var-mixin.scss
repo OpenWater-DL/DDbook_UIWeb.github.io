@@ -13,3 +13,9 @@ $breakpoints: 600px;
     width: 80%;
     max-width: 1200px;
 }
+
+@mixin flex-center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

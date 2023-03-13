@@ -68,7 +68,7 @@
     width: 100vw;
     height: 65vh;
     position: absolute;
-    top: 0;
+    top: .5rem;
     left: 0;
     background-color: blue;
     background-size: contain !important;
@@ -183,26 +183,41 @@ $rootPath:'.';
 
 #o-p-site-title {
     z-index: 2;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    bottom:40%;
+    position: relative;
+
+    transform: translateY(-50%);
+    // left: 50%;
+    top: 0;
     width: 90%;
     text-align: center;
+    // background-color: #eb4c0d;
 
     img {
         width: 100%;
-        max-width: 400px;
+        // max-width: 400px;
     }
 
     @media (min-width:$breakpoints) {
-        //pc
+
+        //PC
+
         z-index: 2;
         position: absolute;
         height: fit-content;
-        
-        transform: translate(-50%, -50%);
-        bottom: 10rem;
+        width: 30%;
+        max-width: 900px;
+        min-width: 400px;
+        max-height: 200px;
+        min-height: 150px;
+        bottom: 20vh;
+
+        // background-color: red;
+        img {
+            width: 100%;
+            // height: 100%;
+            object-fit: contain;
+            //  max-width: 800px;
+        }
     }
 
 }
@@ -225,15 +240,12 @@ $rootPath:'.';
     flex-direction: column;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
-
+    // gap: 1rem;
 
     &__text {
-        // background-color: #eb4c0d;
 
-        // flex: 1;
         margin: 0 2.5rem;
-        margin-top: 4rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem; //区别于pc
         font-size: .9rem;
         line-height: 1.8rem;
 
@@ -268,6 +280,7 @@ $rootPath:'.';
 
 
     $textColor_sub:#666666;
+
     &__kikaku {
         flex: 10%;
         font-size: 9px;
@@ -291,39 +304,26 @@ $rootPath:'.';
 
     @media (min-width:$breakpoints) {
         //pc
-        height: 15rem;
+        height: 30vh;
 
+        justify-content: space-between;
+
+        &__text {
+            flex: 2;
+            margin-top: 8vh;
+            margin-bottom: 0rem;
+        }
 
         &__kikaku {
-            position: absolute;
-            bottom: 1.9rem;
-            // right: 2rem;
-            left: 50%;
-            transform: translate(-50%);
-           
-            font-size: .6rem;
-            display: flex;
-            // color: rgb(102, 102, 102);
-            // color: red;
+            @include flex-center;
+            padding: 0;
 
-            align-items: center;
-            // background-color: #eb4c0d;
-    
         }
-    
-        &__copyright {
-            position: absolute;
-            bottom: .8rem;
-            // right:  2rem;
 
-            left: 50%;
-            transform: translate(-50%);
-         
+        &__copyright {
+            @include flex-center;
             font-size: .6rem;
-            // color: rgb(102, 102, 102);
-    
-            // background-color: blue;
-    
+
         }
 
     }
@@ -616,6 +616,59 @@ $rootPath:'.';
 #o-p-over-main {
     min-height: 80vh;
 }
+
+
+#o-p-over-success {
+
+    margin: 0 auto;
+
+    div {
+        display: flex;
+        align-items: center;
+
+        margin-top: 1rem;
+        // gap: 1rem;
+
+        img {
+            width: 50px;
+            margin: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #0C7038;
+        }
+    }
+}
+
+.o-c-endpage-trouble{
+    // background-color: #FFFF87;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    &--title{
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    &--img{
+        width: 100%;
+        max-width: 500px;
+        img{
+            width: 100%;
+        }
+    }
+    &--contents{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+}
+
 
 #o-p-countdown-dailog {
     z-index: 4;

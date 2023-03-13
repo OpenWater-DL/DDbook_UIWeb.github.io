@@ -109,7 +109,16 @@ for(let i=0;i<checkList.length;i++){
 
 
 function nextPage(){
+
+    let checkedNum  = document.querySelectorAll('input:checked').length;
+if(checkedNum == 3) {
+
     window.open('2.html','_self')
+}else{
+    const info = document.querySelector('#select-only3')
+    info.classList.remove('u-hidden');
+} 
+
 }
 
 function prePage(){
