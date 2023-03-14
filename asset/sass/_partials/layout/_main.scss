@@ -1,17 +1,40 @@
 @use "../foundation/var-mixin"as *;
 
+
+#l-m-top-page-body{
+
+    display: flex;
+    flex-direction: column;   
+    height: 100vh;
+    // justify-content: space-around;
+// gap: 1rem;
+
+    @media (min-width:$breakpoints) {
+        //PC
+
+        // gap: 0;
+        .o-p-pre-img{
+            // flex-basis: 60vh;   
+            height: 60vh;         
+            flex-grow:1;            
+        }    
+    }
+
+    
+ 
+
+}
+
 .l-m-page-body {
     background-color: $bg-color;
 
-    // background: url('/asset/img/map.png');
-    // background-size: 95%;
-//    max-width: 1300px;
-    background-position:center;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    height: 100vh;
+
 
 }
 
@@ -19,53 +42,69 @@
 //main 是input页的白色部分。
 .l-main {
 
-    // overflow: hidden;
+    flex-grow: 1;
 
-    
-    // box-sizing: border-box;
-    // width: 80%;
-    @include main-width;
-    
+    width: 80%;    
+    max-width: 592px;
     
     border-radius: $main-border-r;
 
 
 
 
-    margin: 6.5rem auto;
-
+    // margin: 0 auto;
+    margin-top: 80px;
     margin-bottom: 2rem;
+
     background-color: white;
-    padding: 2rem;
+    box-sizing: border-box;
+    padding:76px;
 
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+
+
+    @media (max-width:$breakpoints) {
+        //Mobile l-main
+          
+        width: calc(100% - 32px);
+
+        margin-top: 40px;
+
+    
+    padding: 32px;
+            
+    
+    
+    }
+
 }
 
 
+
 .l-m-background-map {
-    position: absolute;
-    top: 3rem;
+    position: fixed;
+    
     left: 50%;
     transform: translate(-50%);
-    max-width: 1400px;
+    // max-width: 1400px;
     width: 100%;
-    height: 700px;
+    height: 100%;
+    // object-fit: cover;
     z-index: -2;
     // overflow: hidden;
     img {
 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         opacity: .9;
 
         z-index: -2;
-     
-        // transform: translate(-50%, -50%);
 
-        height: 1000px;
-        width: 100%;
-        filter: blur(2px);
+        // filter: blur(2px);
       
-        object-fit: cover;
     }
 }

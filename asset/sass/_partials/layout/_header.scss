@@ -1,14 +1,41 @@
+@use "../foundation/var-mixin"as *;
+
 .l-header{
-width: 80%;
-max-width: 400px;
+// width: 100%;
 
 position:absolute;
-left:50%;
-transform: translate(-50%);
-top: 2rem;
+
+// background-color: antiquewhite;
+// transform: translate(-50%,-90%);
+// left: 50%;
+top: 40px;
+// top: 7rem;
+text-align: center;
+img{
+    width: 80%;
+    max-width: 450px;
+    
+}
+
+
+
+@media (max-width:$breakpoints) {  
+//mobile
+        // background-color: antiquewhite;
+        left: 50%;
+        top: 10px;
+        position:absolute;
+
+transform: translateX(-50%);
 
 img{
-    width:100%;
+    width: 100%;
+    min-width: 250px;
+    
 }
+}
+
+
+
 }
 

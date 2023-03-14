@@ -1,33 +1,55 @@
 @use '../foundation/var-mixin'as *;
 
 .l-footer {
-    // position: fixed;
-    // left: 0;
     position: relative;
     width: 100%;
     background-color: $bg-yellow;
 
     #footer-container{
-//    box-sizing: border-box;
-//         // padding: 32px;
-//    width: 80%;
 
    @include main-width;
 
 
         margin: 0 auto;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
-    //  background-color: rgb(160, 160, 223);
         height: 157px;
     
         p {
             color: #666666;
-            font-size: 14px;
+            font-size: 8px;
             align-self: center;
             text-align: left;
           
         }
+
+
+        @media (max-width:$breakpoints) {
+            //Mobile 
+    
+            flex-direction: column;
+    
+            justify-content: center;
+            gap: 1rem;
+
+            p{
+                white-space: nowrap;
+            }
+    
+        }
+
+
+
+
     }
+
+
+  
+    
+
+
+
+
    
 }

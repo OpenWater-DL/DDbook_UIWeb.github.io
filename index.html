@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>認知症世界一周ツアー</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-    <!-- <div id="o-p-background">
-        <img src="asset/img/map.png" alt="">
-    </div> -->
-
-    <div class="o-p-pre-img">   
-
-        <div id="o-p-pre-img--pc"></div>
-        <div id="o-p-pre-img--mb"></div>        
- 
+  </head>
+  <body id="l-m-top-page-body">
+    <div class="o-p-pre-img">
+      <div id="o-p-pre-img--pc"></div>
+      <div id="o-p-pre-img--mb"></div>
     </div>
 
-   
     <!-- <div id="o-p-tabibito">
         <img src="asset/img/tabibito.png" alt="" srcset="">
     </div> -->
 
     <div id="o-p-intro">
-
+      <div id="o-p-intro__container">
         <div id="o-p-site-title">
-            <img src="asset/img/site-title.png" alt="" srcset="">
+          <img src="asset/img/site-title.png" alt="" srcset="" />
         </div>
 
         <div id="o-p-intro__text">
-            <p>
-                こんにちは！
-                「認知症世界一周ツアー」<span id="o-p-intro__text--fake">申し込みページ</span>です。お申し込みされる方は、次の<span id="o-p-intro__text--true" onclick="openNextPage()">ページ</span>を押してください!
-            </p>            
+          <p>
+            こんにちは！ 「認知症世界一周ツアー」<span
+              id="o-p-intro__text--fake"
+              >申し込みページ</span
+            >です。お申し込みされる方は、次の<span
+              id="o-p-intro__text--true"
+              onclick="openNextPage()"
+              >ページ</span
+            >を押してください!
+          </p>
         </div>
-            <div id="o-p-intro__btn" onclick="openDialog()">
-                行かない
-            </div>
+        <div id='o-p-intro__btn-container'>
+            <div id="o-p-intro__btn" onclick="openDialog()">行かない</div>
+            
+        </div>
 
-            <div id="o-p-intro__kikaku">認知症世界の歩き方 実践編」ART：認知症世界を体験してみよう
-            </div>
-            <div id="o-p-intro__copyright" class="copyright">
-                <p>Copyright © 2021 issue+design All Rights Reserved.</p>
-              </div>
+        <div id="o-p-intro__kikaku">
+          「認知症世界の歩き方 実践編」ART：認知症世界を体験してみよう
+        </div>
+        <div id="o-p-intro__copyright" class="copyright">
+          <p>Copyright © 2021 issue+design All Rights Reserved.</p>
+        </div>
+      </div>
     </div>
 
-    <div id="o-p-toppage-dialog" class="o-c-dialog u-hidden" >
-            <p>そんなこと言わないで進みましょう！</p>
-            <button id="o-p-toppage-dialog__ok">OK</button>
-            <div id="o-p-toppage-dialog__close"><p>Close</p></div>
-            <div id="o-p-toppage-dialog__rotate">
-              <img src="./asset/img/rotate.png" alt="" srcset="" />
-            </div>     
-
-
+    <div id="o-p-toppage-dialog" class="o-c-dialog u-hidden">
+      <p>そんなこと言わないで進みましょう！</p>
+      <button id="o-p-toppage-dialog__ok">OK</button>
+      <div id="o-p-toppage-dialog__close"><p>Close</p></div>
+      <div id="o-p-toppage-dialog__rotate">
+        <img src="./asset/img/rotate.png" alt="" srcset="" />
+      </div>
     </div>
-
-   
 
     <script src="asset/js/top.js"></script>
-</body>
+  </body>
 </html>
