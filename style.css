@@ -709,7 +709,7 @@ button {
 }
 
 #o-p-over-main {
-  min-height: 80vh;
+  height: fit-content;
 }
 
 #o-p-over-success {
