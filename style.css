@@ -797,6 +797,15 @@ button {
   height: 100vh;
 }
 
+#agree-text {
+  -webkit-overflow-scrolling: auto;
+}
+@media (min-width: 600px) {
+  #agree-text {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 .u-hidden {
   display: none !important;
 }

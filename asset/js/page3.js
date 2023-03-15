@@ -15,7 +15,7 @@ function checkAgree_y() {
   let scrollHeight = document.getElementById("agree-text").scrollHeight;
   let textAreaHeight = document.getElementById("agree-text").clientHeight;
   // console.log(scrollTop, scrollHeight);
-  if (scrollTop + textAreaHeight >= scrollHeight) {
+  if (scrollTop + textAreaHeight >= scrollHeight - 10) {
     document
       .querySelector("#agree-checkbox-label")
       .classList.add("agree-scroll-ok");
@@ -69,98 +69,66 @@ function scrollControl() {
 
   //判断设备
 
-/* Storing user's device details in a variable*/
+  /* Storing user's device details in a variable*/
 
-let details = navigator.userAgent;
-let regexp = /android|iphone|kindle|ipad/i;
-let isMobileDevice = regexp.test(details);
+  let details = navigator.userAgent;
+  let regexp = /android|iphone|kindle|ipad/i;
+  let isMobileDevice = regexp.test(details);
 
-let set_position=0;
+  let set_position = 0;
 
-if (isMobileDevice) {
-  autoScroll_mb();
-  console.log('is moblie')
+  if (isMobileDevice) {
+    autoScroll_mb();
+    console.log("is moblie");
+  } else {
+    autoScroll_pc();
+  }
 
-} else {
-  autoScroll_pc();
-
-}
-
-
-function autoScroll_pc(){
-  //PC
-  textArea.addEventListener("scroll", (event) => {
-    let scrollTop = document.getElementById("agree-text").scrollTop;
-    let scrollHeight = document.getElementById("agree-text").scrollHeight;
-    let textAreaHeight = document.getElementById("agree-text").clientHeight;
-    let maxPos = scrollHeight -  textAreaHeight + 10;
-
-    if (set_position < textArea.scrollTop) {
-      console.log(`down`); 
-      gsap.to("#agree-text", {scrollTo:maxPos, 
-      duration: 0.3 ,ease: "none"       
-      });
-
-      
-    } else if(set_position > textArea.scrollTop) {
-      console.log(`up`); 
-      gsap.to("#agree-text", {scrollTo:'min', duration: .3,ease: "none"    });
-
-    }
-   
-
-  set_position = textArea.scrollTop;
-
-  });
-
-
-}
-
-
-function autoScroll_mb(){
-  textArea.style.scrollBehavior = 'auto'
-
-  textArea.addEventListener("scroll", (event) => {
-    let scrollTop = document.getElementById("agree-text").scrollTop;
-    let scrollHeight = document.getElementById("agree-text").scrollHeight;
-    let textAreaHeight = document.getElementById("agree-text").clientHeight;
-
-    let maxPos = scrollHeight -  textAreaHeight;
-
-
-    if(set_position <= maxPos && set_position >= 0){
-      //没有超出最大边界的情况下
+  function autoScroll_pc() {
+    //PC
+    textArea.addEventListener("scroll", (event) => {
+      let scrollTop = document.getElementById("agree-text").scrollTop;
+      let scrollHeight = document.getElementById("agree-text").scrollHeight;
+      let textAreaHeight = document.getElementById("agree-text").clientHeight;
+      let maxPos = scrollHeight - textAreaHeight + 10;
 
       if (set_position < textArea.scrollTop) {
-        console.log(`down`); 
-        gsap.to("#agree-text", {scrollTo: maxPos, 
-        duration: .3,ease: "none" });
-  
-        
-      } else if(set_position > textArea.scrollTop  ) {
-        console.log(`up`); 
-        gsap.to("#agree-text", {scrollTo:0, duration: .3,ease: "none" });
-  
+        console.log(`down`);
+        gsap.to("#agree-text", {
+          scrollTo: maxPos,
+          duration: 0.3,
+          ease: "none",
+        });
+      } else if (set_position > textArea.scrollTop) {
+        console.log(`up`);
+        gsap.to("#agree-text", {
+          scrollTo: "min",
+          duration: 0.3,
+          ease: "none",
+        });
       }
 
+      set_position = textArea.scrollTop;
+    });
+  }
 
-    }
+  let is_down = false;
+  let is_up = true;
+  function autoScroll_mb() {
+    textArea.style.scrollBehavior = "auto";
 
-    
-   
+        let scrollTop = document.getElementById("agree-text").scrollTop;
+      let scrollHeight = document.getElementById("agree-text").scrollHeight;
+      let textAreaHeight = document.getElementById("agree-text").clientHeight;
 
-  set_position = textArea.scrollTop;
+      let maxPos = scrollHeight - textAreaHeight;
+
+    gsap. to("#agree-text",{
+      scrollTo:maxPos,
+      duration: 7,
+      ease:'none'
+    })
 
 
-    
-
-  });
-
-
+  } //mb mode
 }
-
-
-}
-
-
-
