@@ -11,7 +11,7 @@ button {
     width: 60%;
     padding: 8px;
     border-radius: 1rem;
-
+    font-size: $p-font-size;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -152,7 +152,7 @@ button {
     display: flex;
     justify-content: space-between;
     // padding: 0 2rem;
-
+    font-size: $btn-font-size;
 
 @media (max-width:$breakpoints) {
     //Mobile Main img

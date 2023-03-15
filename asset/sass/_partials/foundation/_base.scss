@@ -1,3 +1,4 @@
+@use '../foundation/var-mixin'as *;
 
 body{
     // background-color: red;
@@ -9,6 +10,7 @@ body{
 p,div{
     margin: 0;
     padding: 0;
+    font-size: $p-font-size;
 }
 
 

@@ -8,6 +8,7 @@ body {
 p, div {
   margin: 0;
   padding: 0;
+  font-size: 14px;
 }
 
 ul {
@@ -70,6 +71,7 @@ ul {
 }
 
 #l-m-top-page-body {
+  font-size: 14px;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -137,6 +139,7 @@ button {
   width: 60%;
   padding: 8px;
   border-radius: 1rem;
+  font-size: 14px;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -231,6 +234,7 @@ button {
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
+  font-size: 13px;
 }
 @media (max-width: 600px) {
   .o-c-page-btn {
@@ -431,18 +435,20 @@ button {
     padding-top: 50px;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
   }
   #o-p-intro__kikaku {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    font-size: 12px;
   }
   #o-p-intro__copyright {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.6rem;
+    font-size: 11px;
   }
 }
 #o-p-intro #o-p-site-title {
@@ -469,7 +475,7 @@ button {
 }
 #o-p-intro__text {
   margin-top: 4rem;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 24px;
 }
 #o-p-intro__text--fake {
@@ -488,7 +494,7 @@ button {
 #o-p-intro__btn {
   background-color: orange;
   color: white;
-  font-size: 10px;
+  font-size: 13px;
   width: 70px;
   padding: 1rem;
   border-radius: 2rem;
@@ -496,12 +502,12 @@ button {
 }
 #o-p-intro__kikaku {
   flex-grow: 1;
-  font-size: 8px;
+  font-size: 12px;
   color: #666666;
 }
 #o-p-intro__copyright {
   flex-grow: 2;
-  font-size: 8px;
+  font-size: 12px;
   color: #666666;
 }
 
