@@ -239,7 +239,9 @@ $rootPath:'.';
 
         &__copyright {
             @include flex-center;
-            font-size: $footer-font-size-sm;
+            p{
+                font-size: $footer-font-size-sm  !important;
+            }
 
         }
 
@@ -332,9 +334,10 @@ $rootPath:'.';
 
     &__copyright {
                 flex-grow: 2;
-
-        font-size: $footer-font-size;
-        color: $textColor_sub;
+                color: $textColor_sub;
+                p{
+                    font-size: $footer-font-size-sm  !important;
+                }
 
         // background-color: blue;
 
