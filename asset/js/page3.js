@@ -61,6 +61,7 @@ function confirmDialog() {
 let set_position;
 
 gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 scrollControl();
 function scrollControl() {
