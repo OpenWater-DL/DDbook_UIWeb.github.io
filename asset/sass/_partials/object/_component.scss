@@ -152,7 +152,7 @@ button {
     display: flex;
     justify-content: space-between;
     // padding: 0 2rem;
-    font-size: $btn-font-size;
+    font-size: $btn-font-size !important;
 
 @media (max-width:$breakpoints) {
     //Mobile Main img

@@ -51,6 +51,8 @@ ul {
 .l-header {
   position: absolute;
   top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 .l-header img {
@@ -234,7 +236,7 @@ button {
   margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 13px !important;
 }
 @media (max-width: 600px) {
   .o-c-page-btn {
