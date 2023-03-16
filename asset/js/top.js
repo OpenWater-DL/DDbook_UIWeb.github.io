@@ -31,7 +31,7 @@ function dialog(){
       dialog_rotateDeg = 0;
       parentDialog.style.transform = ` translate(-50%,-50%)  rotate( ${dialog_rotateDeg}deg)`;
 
-      parentDialog.style.display = 'none';
+      parentDialog.classList.add('u-hidden');
   })
 
   const btnOk = document.querySelector('#o-p-toppage-dialog__ok')
