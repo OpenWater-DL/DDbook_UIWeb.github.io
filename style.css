@@ -252,6 +252,9 @@ button {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   height: 3rem;
 }
+.o-c-page-btn#end-page-btn {
+  justify-content: center;
+}
 
 .o-c-input-sel {
   box-sizing: border-box;
