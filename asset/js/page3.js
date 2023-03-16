@@ -86,30 +86,45 @@ function scrollControl() {
 
   function autoScroll_pc() {
     //PC
-    textArea.addEventListener("scroll", (event) => {
-      let scrollTop = document.getElementById("agree-text").scrollTop;
-      let scrollHeight = document.getElementById("agree-text").scrollHeight;
-      let textAreaHeight = document.getElementById("agree-text").clientHeight;
-      let maxPos = scrollHeight - textAreaHeight + 10;
 
-      if (set_position < textArea.scrollTop) {
-        console.log(`down`);
-        gsap.to("#agree-text", {
-          scrollTo: maxPos,
-          duration: 0.3,
-          ease: "none",
-        });
-      } else if (set_position > textArea.scrollTop) {
-        console.log(`up`);
-        gsap.to("#agree-text", {
-          scrollTo: "min",
-          duration: 0.3,
-          ease: "none",
-        });
-      }
+    let scrollTop = document.getElementById("agree-text").scrollTop;
+    let scrollHeight = document.getElementById("agree-text").scrollHeight;
+    let textAreaHeight = document.getElementById("agree-text").clientHeight;
 
-      set_position = textArea.scrollTop;
-    });
+    let maxPos = scrollHeight - textAreaHeight;
+
+  gsap. to("#agree-text",{
+    scrollTo:maxPos,
+    duration: 7,
+    ease:'none'
+  })
+
+
+
+    // textArea.addEventListener("scroll", (event) => {
+    //   let scrollTop = document.getElementById("agree-text").scrollTop;
+    //   let scrollHeight = document.getElementById("agree-text").scrollHeight;
+    //   let textAreaHeight = document.getElementById("agree-text").clientHeight;
+    //   let maxPos = scrollHeight - textAreaHeight + 10;
+
+    //   if (set_position < textArea.scrollTop) {
+    //     console.log(`down`);
+    //     gsap.to("#agree-text", {
+    //       scrollTo: maxPos,
+    //       duration: 0.3,
+    //       ease: "none",
+    //     });
+    //   } else if (set_position > textArea.scrollTop) {
+    //     console.log(`up`);
+    //     gsap.to("#agree-text", {
+    //       scrollTo: "min",
+    //       duration: 0.3,
+    //       ease: "none",
+    //     });
+    //   }
+
+    //   set_position = textArea.scrollTop;
+    // });
   }
 
   let is_down = false;
