@@ -1,7 +1,7 @@
 createGender();
 function createGender() {
   let tgt = document.querySelector("#o-p-gender");
-  const WArr = ["♀", "👨", "👻", "その他"];
+  const WArr = ["♀", "👨", "その他"];
   createSelectList(WArr, tgt, "mySelect");
 }
 
