@@ -12,7 +12,7 @@ function createFooter(){
     footer.innerHTML = `
     <div id="footer-container">
     <p>「認知症世界の歩き方 実践編」ART：認知症世界を体験してみよう</p>
-    <p>© 2023 認知症世界一周ツアー</p>
+    <p>© 2021 issue+design All Rights Reserved.</p>
     </div>
    `
     document.body.appendChild(footer);
